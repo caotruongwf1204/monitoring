@@ -7,20 +7,6 @@ wget https://github.com/prometheus/node_exporter/releases/download/v$VERSION/nod
 tar xvfz node_exporter-*.*-amd64.tar.gz
 cd node_exporter-*.*-amd64
 mv node_exporter /usr/local/bin/
-# read -p "username : " username
-# read -sp "password : " password
-# cat <<EOF > hashpw.py
-# import getpass
-# import bcrypt
-# import sys
-
-# username = sys.argv[1]
-# password = sys.argv[2]
-# hashed_password = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
-# print(username +": "+ hashed_password.decode())
-# EOF
-# apt-get update && apt-get install python3-pip -y && pip3 install bcrypt
-# basic_auth=`python3 hashpw.py $username $password`
 
 if [[ -n $BASIC_AUTH ]];then
     mkdir -p /etc/node_exporter
